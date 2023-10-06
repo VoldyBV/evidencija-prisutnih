@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odsustva</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/odsustva.css">
+    <link rel="shortcut icon" href="../assets/calendar.png" type="image/x-icon">
+    <script src="../js/main.js"></script>
+    <script src="../js/odsustva.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form class="simple-form" data-sheet-name="Odsustva" onsubmit="Submit_Form_To_Sheet(this, event)">
+            <div class="naslov">
+                <h1 class="form-heading">Upiši odsustvo</h1>
+            </div>
+            <div class="clan">
+                <label for="" class="form-field">
+                    <span>Član</span>
+                    <input type="text" name="clan" list="imena-clanova">
+                </label>
+            </div>
+            <div class="grupa">
+                <label for="" class="form-field">
+                    <span>Grupa</span>
+                    <select name="grupa"required value="Odaberi grupu...">
+                        <option value="" style="display: none;">Odaberi grupu..</option>
+                        <option value="podmladak">podmladak</option>
+                        <option value="omladina">omladina</option>
+                    </select>
+                </label>
+            </div>
+            <div class="datum">
+                <label for="" class="form-field">
+                    <span>Datum</span>
+                    <input type="date" name="datum" required>
+                </label>
+            </div>
+            <div class="razlog">
+                <label for="" class="form-field">
+                    <span>Razlog</span>
+                    <input type="text" name="razlog" required>
+                </label>
+            </div>
+            <div class="dugme-container">
+                <button class="zatvori" type="button" onclick="Go_Back()">Zatvori</button>
+                <input type="submit" value="Potvrdi" class="potvrdi">
+            </div>
+            <datalist id="imena-clanova">
+            </datalist>
+        </form>
+    </div>
+    <div class="waiting-block">
+        <img src="../assets/waiting_block_image.svg" alt="No image">
+        <p>Molimo, sačekajte...</p>
+    </div>
+    <div class="success">
+        <img src="../assets/check_mark.svg" alt="No image">
+        <p>Zapis sačuvan!</p>
+    </div>
+</body>
+</html>

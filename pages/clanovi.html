@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Članovi</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../assets/calendar.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <form class="simple-form" data-sheet-name="Clanovi" onsubmit="Submit_Form_To_Sheet(this, event)">
+            <input type="hidden" value="Clanovi" name="ime_tabele">
+            <div class="naslov">
+                <h1 class="form-heading">Upiši člana</h1>
+            </div>
+            <div class="puno-ime">
+                <label for="" class="form-field">
+                    <span>Puno ime</span>
+                    <input type="text" name="puno_ime" id="puno_ime" placeholder="Marko Marković" required>
+                </label>
+            </div>
+            <div class="broj-telefona">
+                <label for="" class="form-field">
+                    <span>Broj telefona</span>
+                    <input type="tel" name="broj_telefona" id="broj_telefona" placeholder="000/000-000" required">
+                </label>
+            </div>
+            <div class="grupa">
+                <label for="" class="form-field">
+                    <span>Grupa</span>
+                    <select name="grupa" id="grupa" required value="Odaberi grupu...">
+                        <option value="" style="display: none;">Odaberi grupu..</option>
+                        <option value="podmladak">podmladak</option>
+                        <option value="omladina">omladina</option>
+                    </select>
+                </label>
+            </div>
+            <div class="razred">
+                <label for="" class="form-field">
+                    <span>Razred</span>
+                    <input type="number" name="razred" id="razred" placeholder="6" required min="1" max="9">
+                </label>
+            </div>
+            <div class="dugme-container">
+                <button class="zatvori" type="button" onclick="Go_Back()">Zatvori</button>
+                <input type="submit" value="Potvrdi" class="potvrdi">
+            </div>
+        </form>
+    </div>
+    <div class="waiting-block">
+        <img src="../assets/waiting_block_image.svg" alt="No image">
+        <p>Molimo, sačekajte...</p>
+    </div>
+    <div class="success">
+        <img src="../assets/check_mark.svg" alt="No image">
+        <p>Zapis sačuvan!</p>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>
